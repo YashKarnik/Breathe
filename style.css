@@ -1,0 +1,66 @@
+:root {
+	--containerRadius: 250px;
+	--bubble-container-radius: 300px;
+	--animation-time: 7s;
+}
+body {
+	background-color: #008891;
+	overflow: hidden;
+}
+
+.container {
+	background-color: #0f3057;
+	width: var(--containerRadius);
+	height: var(--containerRadius);
+	border-radius: 100%;
+	filter: drop-shadow(0px 0px 20px #e7e7de);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation: pulse var(--animation-time) ease-in-out none infinite alternate;
+	transform: translate(-50%, -50%);
+}
+
+/* e7e7de */
+.bubble {
+	background-color: #e7e7de;
+	width: 25px;
+	height: 25px;
+	border-radius: 100%;
+	margin: -10px;
+}
+.bubble-container {
+	height: var(--bubble-container-radius);
+	width: 15px;
+	/* background-color: red; */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: container-height-animate var(--animation-time) ease-in-out none
+		infinite alternate;
+}
+
+@keyframes pulse {
+	from {
+		width: var(--containerRadius);
+		height: var(--containerRadius);
+	}
+	to {
+		width: calc(var(--containerRadius) * 2);
+		height: calc(var(--containerRadius) * 2);
+	}
+}
+
+@keyframes container-height-animate {
+	from {
+		height: var(--bubble-container-radius);
+		transform: translate(-50%, -50%) rotate(0deg);
+		padding: 0;
+	}
+	to {
+		height: calc(var(--bubble-container-radius) * 2);
+		transform: translate(-50%, -50%) rotate(360deg);
+		padding-top: 55px;
+	}
+}
