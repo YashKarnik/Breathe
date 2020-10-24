@@ -1,3 +1,3 @@
-# JS Animation
+# Breathe 
 
-View deployment here: [https://yashkarnik.github.io/JS-Animation-Breathe](https://yashkarnik.github.io/JS-Animation-Breathe/)
+View deployment here: [https://yashkarnik.github.io/Breathe/](https://yashkarnik.github.io/Breathe/)
