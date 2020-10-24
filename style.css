@@ -1,7 +1,7 @@
 :root {
 	--containerRadius: 250px;
 	--bubble-container-radius: 330px;
-	--animation-time: 7s;
+	--animation-time: 8s;
 }
 body {
 	background-color: #008891;
@@ -14,14 +14,9 @@ body {
 	height: var(--containerRadius);
 	border-radius: 100%;
 	filter: drop-shadow(0px 0px 20px #e7e7de);
-	position: absolute;
-	top: 50%;
-	left: 50%;
 	animation: pulse var(--animation-time) linear none infinite alternate;
-	transform: translate(-50%, -50%);
 }
 
-/* e7e7de */
 .bubble {
 	background-color: #e7e7de;
 	width: 25px;
@@ -31,15 +26,23 @@ body {
 .bubble-container {
 	height: var(--bubble-container-radius);
 	width: 15px;
-	background-color: red;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	animation: container-height-animate calc(var(--animation-time) * 2) linear
 		none infinite normal;
 }
 
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 2rem;
+	line-height: 2rem;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 @keyframes pulse {
 	from {
 		width: var(--containerRadius);
