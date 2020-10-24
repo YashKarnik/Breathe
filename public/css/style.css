@@ -13,6 +13,19 @@
 	--bubble-container-radius: 330px;
 	--animation-time: 8000ms;
 }
+
+@media only screen and (max-width: 600px) {
+	:root {
+		--containerRadius: 150px;
+		--bubble-container-radius: 230px;
+		--animation-time: 8000ms;
+		font-size: 10px;
+	}
+	.waves {
+		display: none;
+	}
+}
+
 body {
 	background-color: #008891;
 	overflow: hidden;
@@ -43,9 +56,17 @@ footer {
 	height: 25px;
 	border-radius: 100%;
 }
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 .bubble-container {
 	height: var(--bubble-container-radius);
 	width: 15px;
+	/* transform: translate(-50%, -50%) rotate(270deg); */
+
 	animation: container-height-animate calc(var(--animation-time) * 2) linear
 		none infinite normal;
 }
@@ -60,12 +81,6 @@ footer {
 		alternate;
 }
 
-.center {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
 .github-corner:hover .octo-arm {
 	animation: octocat-wave 560ms ease-in-out;
 }
@@ -110,7 +125,6 @@ footer {
 		background-color: #0f3057;
 	}
 }
-
 @keyframes container-height-animate {
 	0% {
 		height: var(--bubble-container-radius);

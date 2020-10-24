@@ -30,10 +30,11 @@
 				style="
 					fill: #64ceaa;
 					color: #fff;
-					position: fixed;
+					position: absolute;
 					top: 0;
 					border: 0;
 					right: 0;
+					z-index: -1;
 				"
 				aria-hidden="true"
 			>
@@ -52,18 +53,6 @@
 			</svg>
 		</a>
 
-		<script>
-			let container = document.querySelector('.container');
-			let headingText = document.querySelector('.text');
-			let Flag = false;
-			let totalTime = 8000;
-			setInterval(() => {
-				headingText.innerHTML = Flag ? 'INHALE' : 'EXHALE';
-				// setTimeout(() => {
-				// 	console.log('HOLD');
-				// }, 2500);
-				Flag = !Flag;
-			}, totalTime);
-		</script>
+		<script src="script.js"></script>
 	</body>
 </html>
