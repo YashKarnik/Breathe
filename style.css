@@ -1,3 +1,8 @@
+@font-face {
+	font-family: kissFONT;
+	src: url('customFONT.ttf');
+}
+
 :root {
 	--containerRadius: 250px;
 	--bubble-container-radius: 330px;
@@ -31,7 +36,7 @@ body {
 }
 
 .text {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'kissFONT';
 	color: #fff;
 	font-size: 2rem;
 	line-height: 2rem;
