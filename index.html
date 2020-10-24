@@ -30,7 +30,7 @@
 				style="
 					fill: #64ceaa;
 					color: #fff;
-					position: absolute;
+					position: fixed;
 					top: 0;
 					border: 0;
 					right: 0;
@@ -52,13 +52,19 @@
 			</svg>
 		</a>
 
-		<script defer>
+		<script>
 			let container = document.querySelector('.container');
 			let headingText = document.querySelector('.text');
 			let Flag = false;
 			let totalTime = 8000;
 			setInterval(() => {
 				headingText.innerHTML = Flag ? 'INHALE' : 'EXHALE';
+				setTimeout(() => {
+					console.log('HOLD');
+				}, 2500);
+				// setTimeout(() => {
+				// 	console.log('Relases');
+				// }, 3000);
 				Flag = !Flag;
 			}, totalTime);
 		</script>
