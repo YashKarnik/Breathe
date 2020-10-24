@@ -3,6 +3,11 @@
 	src: url('../fonts/Rawkbrush-ywLym.otf');
 }
 
+* {
+	padding: 0;
+	margin: 0;
+}
+
 :root {
 	--containerRadius: 250px;
 	--bubble-container-radius: 330px;
@@ -14,7 +19,7 @@ body {
 }
 footer {
 	font-family: 'customFONT';
-	color: #fff;
+	color: #00587a;
 	position: absolute;
 	letter-spacing: 2px;
 	bottom: 0px;
@@ -63,6 +68,15 @@ footer {
 .github-corner:hover .octo-arm {
 	animation: octocat-wave 560ms ease-in-out;
 }
+
+.waves {
+	position: absolute;
+	bottom: 0px;
+	z-index: -1;
+	height: 30vh;
+	width: 120%;
+	left: -10px;
+}
 @keyframes octocat-wave {
 	0%,
 	100% {
@@ -89,10 +103,12 @@ footer {
 	from {
 		width: var(--containerRadius);
 		height: var(--containerRadius);
+		background-color: #16447a;
 	}
 	to {
 		width: calc(var(--containerRadius) * 2);
 		height: calc(var(--containerRadius) * 2);
+		background-color: #0f3057;
 	}
 }
 
