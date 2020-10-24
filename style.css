@@ -1,16 +1,25 @@
 @font-face {
-	font-family: kissFONT;
-	src: url('customFONT.ttf');
+	font-family: customFONT;
+	src: url('Rawkbrush-ywLym.otf');
 }
 
 :root {
 	--containerRadius: 250px;
 	--bubble-container-radius: 330px;
-	--animation-time: 8s;
+	--animation-time: 8000ms;
 }
 body {
 	background-color: #008891;
 	overflow: hidden;
+}
+footer {
+	font-family: 'customFONT';
+	color: #fff;
+	position: absolute;
+	letter-spacing: 2px;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .container {
@@ -36,10 +45,13 @@ body {
 }
 
 .text {
-	font-family: 'kissFONT';
+	font-family: 'customFONT';
 	color: #fff;
 	font-size: 2rem;
-	line-height: 2rem;
+	letter-spacing: 5px;
+	margin-top: -1px;
+	animation: text-size-animate var(--animation-time) linear none infinite
+		alternate;
 }
 
 .center {
@@ -47,6 +59,31 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+	0%,
+	100% {
+		transform: rotate(0);
+	}
+	20%,
+	60% {
+		transform: rotate(-25deg);
+	}
+	40%,
+	80% {
+		transform: rotate(10deg);
+	}
+}
+@media (max-width: 500px) {
+	.github-corner:hover .octo-arm {
+		animation: none;
+	}
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out;
+	}
 }
 @keyframes pulse {
 	from {
@@ -73,5 +110,13 @@ body {
 		height: calc(var(--bubble-container-radius));
 		transform: translate(-50%, -50%) rotate(720deg);
 		padding-top: 0px;
+	}
+}
+@keyframes text-size-animate {
+	from {
+		font-size: 2rem;
+	}
+	to {
+		font-size: 6rem;
 	}
 }
